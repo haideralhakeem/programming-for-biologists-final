@@ -18,3 +18,13 @@ plt.title("Nonlog Concentration versus Diameter")
 plt.show()
 plot.savefig('final_part_A_nonlog_hah288.pdf')
 
+
+tetrahymena_means['log_concentration'] = np.log(tetrahymena_means['conc'])
+tetrahymena_means['log_diameter'] = np.log(tetrahymena_means['diameter'])
+
+plot = sns.FacetGrid(tetrahymena_means, hue="glucose", size=5, hue_order=["glucose_yes", "glucose_no"], hue_kws=dict(marker=["o", "s"])) \
+   .map(plt.scatter, "log_diameter", "log_concentration") \
+   .add_legend()
+plt.title("Log Concentration versus Diameter")
+plt.show()
+plot.savefig('final_part_A_log_hah288.pdf')
