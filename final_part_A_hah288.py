@@ -28,3 +28,4 @@ plot = sns.FacetGrid(tetrahymena_means, hue="glucose", size=5, hue_order=["gluco
 plt.title("Log Concentration versus Diameter")
 plt.show()
 plot.savefig('final_part_A_log_hah288.pdf')
+
