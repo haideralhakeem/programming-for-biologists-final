@@ -34,13 +34,14 @@ plt.show() # Displays the figure
 plot.savefig('final_part_A_nonlog_hah288.pdf') # Saves the figure
 
 
+#pdb.set_trace()
+#Python debugger
+
+
 tetrahymena_means['log_concentration'] = np.log(tetrahymena_means['conc'])
 # Computes the natural log of all values in the 'conc' column and adds them to a new column labelled 'log_concentration'
 tetrahymena_means['log_diameter'] = np.log(tetrahymena_means['diameter'])
 # Computes the natural log of all values in the 'diameter' column and adds them to a new column labelled 'log_concentration'
-
-
-#pdb.set_trace()
 
 
 plot = sns.FacetGrid(tetrahymena_means, hue="glucose", size=5, hue_order=["glucose_yes", "glucose_no"], hue_kws=dict(marker=["o", "s"])) \
